@@ -19,5 +19,5 @@ main{
     display: grid;
     grid-template-columns: minmax(220px, 1fr)
 minmax(420px,1.6fr)
-
+    align-items: calc(100vh - 1)
 }
