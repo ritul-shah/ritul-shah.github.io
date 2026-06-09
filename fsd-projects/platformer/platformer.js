@@ -52,6 +52,7 @@ $(function () {
     createCannon("top", 200, 1000);
     createCannon("right", 300, 2000);
     reateCannon("left", 500, 5000);
+    reateCannon("top", 1200, 50);
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
     //////////////////////////////////
