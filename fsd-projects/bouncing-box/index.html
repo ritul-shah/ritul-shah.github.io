@@ -71,9 +71,9 @@
 
       // TODO 2 - Variable declarations
       moveBoxTo(200); // Moves box to x-position 200
-      var exampleVariable = 5
-      variableName = variableName + 10; // Adds 10 to variableName
-      variableName = variableName + 3; // Adds 3 to variableName
+      var positionX = 5
+      var points = 0
+      var speed = 10
 
       /**
        * This Function will be called 20 times/second.
@@ -81,11 +81,15 @@
        * If the box drifts off the screen, turn it around!
        */
       function update() {
-        moveBoxTo(200); // Moves box to x-position 200s
-        moveBoxTo(boardWidth); // Moves box to right edge
-        if (positionX > boardWidth) {
-          speed = speed * -1;
+        moveBoxTo(positionX); // Moves box to right edge
+        if (positionX >= boardWidth || positionX <= 0) {
+          speed *= -1;
         }
+
+
+
+        positionX += speed
+
 
       }
 
@@ -97,11 +101,20 @@
        * - move the box to the left side of the screen.
        */
       function handleBoxClick() {
-        variableName = variableName + 1; // Adds 1 to variableName
+        points++
+        changeBoxText(points)
 
-
-
+        if (speed < 0) {
+          speed -=3
+        } else {
+          speed +=3
+        }
       }
+
+
+
+
+
 
 
 
